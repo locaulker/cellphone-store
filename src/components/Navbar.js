@@ -12,7 +12,7 @@ export default function Navbar() {
         return (
           <NavWrapper>
             <div className="nav-center">
-              <FaBars className="nav-icon" onClick={handleSidebar} />
+              <FaBars className="nav-icon bars" onClick={handleSidebar} />
               <img src={logo} alt="Company Logo" />
               <div className="nav-cart">
                 <FaCartPlus className="nav-icon" onClick={handleCart} />
@@ -26,10 +26,10 @@ export default function Navbar() {
   )
 }
 
-
 const NavWrapper = styled.nav`
   position: -webkit-sticky;
   position: sticky;
+  /* position: fixed; */
   top: 0;
   width: 100%;
   padding: 1rem 1.5rem;
@@ -40,12 +40,15 @@ const NavWrapper = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1170;
+    max-width: 1170px;
     margin: 0 auto;
   }
   .nav-icon {
     font-size: 1.5rem;
     cursor: pointer;
+  }
+  .bars {
+    transform: scaleX(1.5);
   }
   .nav-cart {
     position: relative;
@@ -56,7 +59,7 @@ const NavWrapper = styled.nav`
     font-size: 0.85rem;
     position: absolute;
     top: -8px;
-    right: -10px;
+    right: -11px;
     padding: 1px 3px;
     text-align: center;
     border-radius: 4px;
