@@ -22,24 +22,26 @@ import Footer from './components/Footer';
 
 class App extends Component {
   render() {
-    return <>
-     {/* Navbar, Sidebar, Cart & Footer Components */}
-     <Navbar />
-     <Sidebar />
-     <SideCart />
-     
-     <Switch>
-       <Route path="/" exact component={ Home } />
-       <Route path="/about" component={ About } />
-       <Route path="/contact" component={ Contact } />
-       <Route path="/products" exact component={ Products } />
-       <Route path="/products/:id" component={ SingleProduct } />
-       <Route path="/cart" component={ Cart } />
-       <Route component={ Default } />
-     </Switch>
+    return (
+      <>
+        {/* Navbar, Sidebar, Cart & Footer Components */}
+        <Navbar />
+        <Sidebar />
+        <SideCart />
 
-     <Footer />
-    </>
+        <Switch>
+          <Route path="/" exact component={ Home } />
+          <Route path="/about" component={ About } />
+          <Route path="/contact" component={ Contact } />
+          <Route path="/products" exact component={ Products } />
+          <Route path="/products/:id" component={ SingleProduct } />
+          <Route path="/cart" component={ Cart } />
+          <Route component={ Default } />
+        </Switch>
+
+        <Footer />
+      </>
+    )
   }
 }
 
