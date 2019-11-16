@@ -7,7 +7,7 @@ class ProductProvider extends Component {
   state = {
     sidebarOpen: false,
     cartOpen: false,
-    cartItems: 0
+    cartItems: 11
   }
 
   // Sidebar Button Handler
@@ -45,7 +45,6 @@ class ProductProvider extends Component {
     )
   }
 }
-
 const ProductConsumer = ProductContext.Consumer;
 
 export { ProductProvider, ProductConsumer };
