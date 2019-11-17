@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../Title';
-import aboutBcg from '../../images/aboutBcg.jpeg';
+import aboutBcg from '../../images/aboutBcg.jpg';
 
 export default function Info() {
   return (
@@ -30,7 +30,7 @@ export default function Info() {
               }}
               >
                 more info
-              </button>
+            </button>
           </div>
           
         </div>

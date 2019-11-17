@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Hero from '../components/Hero';
+import contactImg from '../images/contactBcg.jpg';
+import Contact from '../components/ContactPage/Contact';
 
-export default function ContactPage() {
+
+export default function CartPage() {
   return (
     <>
-      <h1>Hello from Contact Page</h1>
+      <Hero img={contactImg} />
+      <Contact />
     </>
   )
 }
