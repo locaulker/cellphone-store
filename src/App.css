@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Open+Sans&display=swap');
 
 :root {
   --primaryColor: #5fb7ea;
@@ -12,6 +12,12 @@
 
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--mainGrey);
+  color: var(--mainBlack);
+}
+
 .text-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -23,8 +29,21 @@
   color: var(--primaryColor);
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
+.main-link {
+  padding: 1rem 2rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: var(--mainLetterSpacing);
+  outline: 4px solid var(--primaryColor);
+  outline-offset: 4px;
+  border: none;
+  transition: var(--mainTransition);
+}
+.main-link:hover {
   background: var(--mainGrey);
-  color: var(--mainBlack);
+  text-decoration: none;
+  color: var(--primaryColor);
+  outline: 4px solid var(--mainGrey);
 }
