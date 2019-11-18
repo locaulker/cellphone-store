@@ -35,7 +35,7 @@ export default class Services extends Component {
           <div className="row">
             {this.state.services.map(item => {
               return (
-                <div className="col-10 mx-auto col-sm-6 col-md-4 my-3" key={item.id}>
+                <div className="col-10 mx-auto col-sm-6 col-md-4 my-3 service-item" key={item.id}>
                   <div className="service-icon text-center">{item.icon}</div>
                   <div className="mt-3 text-capitalize text-center">{item.title}</div>
                   <div className="mt-3">
@@ -52,8 +52,13 @@ export default class Services extends Component {
 }
 
 const ServicesWrapper = styled.section`
-  /* background: rgba(95, 183, 234, 0.1); */
+  background: rgba(95, 183, 234, 0.1);
 
+  .service-item {
+    padding: 2rem;
+    margin: 0 6rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+  }
   .service-icon {
     font-size: 2.5rem;
     color: var(--primaryColor);
