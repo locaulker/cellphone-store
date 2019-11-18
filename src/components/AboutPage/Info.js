@@ -18,9 +18,9 @@ export default function Info() {
           </div>
           <div className="col-10 mx-auto col-md-6 my-3">
             <Title title="about us" />
-            <p className="text-lead text-muted my-3">Optical connections between computer components will allow data to be transmitted faster than modern electronic ones, and over long distances. It is already about transferring data in electronic connections with terabit speed.</p>
+            <p className="text-lead text-muted my-3">Optical connections between computer components will allow data to be transmitted faster than modern electronic ones, and over long distances.</p>
 
-            <p className="text-lead text-muted my-3">Chronic heart failure (CHF) - a pathological condition of the body, allocated in a separate disease accompanied by deficiency of blood supply to tissues and organs in the body. The major manifestations of the disease are breathlessness and decreased physical activity.</p>
+            <p className="text-lead text-muted my-3">Chronic heart failure (CHF) - a pathological condition of the body, allocated in a separate disease accompanied by deficiency of blood supply to tissues and organs in the body.</p>
 
             <button 
               className="main-link" 
