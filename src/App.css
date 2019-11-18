@@ -10,7 +10,6 @@
   --mainBlack: #222;
   --mainTransition: all 0.3s ease-in-out;
   --mainLetterSpacing: 0.3rem;
-
 }
 
 body {
@@ -31,7 +30,7 @@ body {
 }
 
 .main-link {
-  padding: 1rem 2rem;
+  padding: .8rem 1.8rem;
   background: var(--primaryColor);
   color: var(--mainWhite);
   display: inline-block;
@@ -48,3 +47,4 @@ body {
   color: var(--mainWhite);
   outline: 4px solid var(--mediumGrey);
 }
+

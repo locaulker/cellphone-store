@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Title from '../Title';
 import {FaDolly, FaMoneyBillWave, FaLock} from 'react-icons/fa';
 
 
@@ -31,7 +32,7 @@ export default class Services extends Component {
     return (
       <ServicesWrapper className="py-5">
         <div className="container">
-        <h1 className="text-center">Services</h1>
+        <Title title="services" center="true" />
           <div className="row">
             {this.state.services.map(item => {
               return (
@@ -55,9 +56,9 @@ const ServicesWrapper = styled.section`
   background: rgba(95, 183, 234, 0.1);
 
   .service-item {
-    padding: 2rem;
-    margin: 0 6rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.1);
   }
   .service-icon {
     font-size: 2.5rem;

@@ -17,12 +17,18 @@ export default function Title({ title, center }) {
 const TitleWrapper = styled.div`
   text-align: ${props => (props.center ? "center" : "left")};
 
-  .title-underline {
-    height: 0.25rem;
-    width: 7rem;
-    background: var(--primaryColor);
-    margin: ${props => (props.center ? "0 auto" : "0")};
+  h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 3rem;
   }
 
-
+  .title-underline {
+    height: 0.2rem;
+    width: 5rem;
+    background: var(--primaryColor);
+    margin: ${props => (props.center ? "0 auto" : "0")};
+    margin-bottom: 1.6rem;
+  }
 `;
