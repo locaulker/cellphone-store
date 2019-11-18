@@ -17,7 +17,7 @@ export default function Footer() {
                   </p>
                 </div>
                 <div className="col-md-6 text-right">
-                  {value.socialIcons.map(item => <a href={item.url} key={item.id} target="_blank">{item.icon}</a>)}
+                  {value.socialIcons.map(item => <a href={item.url} key={item.id} target="_blank" rel="noopener noreferrer">{item.icon}</a>)}
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import {Link} from 'react-router-dom';
 import Services from '../components/HomePage/Services';
-import FeaturedProducts from '../components/HomePage/FeaturedProducts';
+import FeaturedProducts from '../components/HomePage/Featured';
 
 
 export default function HomePage() {
