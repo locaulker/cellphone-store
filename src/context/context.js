@@ -13,10 +13,10 @@ class ProductProvider extends Component {
     links: linkData,
     socialIcons: socialData,
     cart: [],
-    cartItems: 0, //double
+    cartItems: 0,
     cartSubTotal: 0,
     cartTax: 0,
-    CartTotal: 0,
+    cartTotal: 0,
     storeProducts: [],
     filteredProducts: [],
     featuredProducts: [],
@@ -59,7 +59,13 @@ class ProductProvider extends Component {
 
   // get cart from  local storage
   getStorageCart = () => {
-    return [];
+    let cart;
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart'))
+    } else {
+      cart = []
+    }
+    return cart;
   }
 
   // get product from local storage
@@ -80,8 +86,8 @@ class ProductProvider extends Component {
 
     // Set Tax Rate here. Change the 1st number
     let stateTaxRate = 7 / 100;
-
     let tax = subTotal * stateTaxRate;
+    
     tax = parseFloat(tax.toFixed(2));
 
     let total = subTotal + tax;
@@ -108,7 +114,7 @@ class ProductProvider extends Component {
 
   // sync storage
   syncStorage = () => {
-
+    localStorage.setItem('cart', JSON.stringify(this.state.cart))
   }
 
   // add to cart
