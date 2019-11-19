@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../Title';
-import aboutBcg from '../../images/aboutBcg.jpg';
+import aboutBcg from '../../images/aboutBcg3.jpg';
 
 export default function Info() {
   return (
