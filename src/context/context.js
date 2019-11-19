@@ -14,7 +14,7 @@ class ProductProvider extends Component {
     socialIcons: socialData,
     cart: [],
     cartItems: 0, //double
-    cartSubTotals: 0,
+    cartSubTotal: 0,
     cartTax: 0,
     CartTotal: 0,
     storeProducts: [],
@@ -49,7 +49,11 @@ class ProductProvider extends Component {
       cart: this.getStorageCart(),
       singleProduct: this.getStorageProduct(),
       loading: false
-    });
+    }, 
+      () => {
+        this.addTotals();
+      }
+    );
   };
 
 
@@ -64,10 +68,43 @@ class ProductProvider extends Component {
   }
 
   // get totals
-  getTotals = () => {};
+  getTotals = () => {
+    let subTotal = 0;
+    let cartItems = 0;
+    this.state.cart.forEach( item => {
+      subTotal += item.total;
+      cartItems += item.count;
+    });
+
+    subTotal = parseFloat(subTotal.toFixed(2));
+
+    // Set Tax Rate here. Change the 1st number
+    let stateTaxRate = 7 / 100;
+
+    let tax = subTotal * stateTaxRate;
+    tax = parseFloat(tax.toFixed(2));
+
+    let total = subTotal + tax;
+    total = parseFloat(total.toFixed(2));
+
+    return {
+      cartItems,
+      subTotal,
+      tax,
+      total
+    }
+  };
 
   // add totals
-  addTotals = () => {};
+  addTotals = () => {
+    const totals = this.getTotals();
+    this.setState ({
+      cartItems: totals.cartItems,
+      cartSubToTal: totals.subTotal,
+      cartTax: totals.tax,
+      cartTotal: totals.total
+    });
+  };
 
   // sync storage
   syncStorage = () => {
@@ -76,7 +113,27 @@ class ProductProvider extends Component {
 
   // add to cart
   addToCart = (id) => {
-    console.log(`add to cart ${id}`);
+    // console.log(`add to cart ${id}`);
+    let tempCart = [...this.state.cart];
+    let tempProducts = [...this.state.storeProducts];
+    let tempItem = tempCart.find(item => item.id === id);
+    if (!tempItem) {
+      tempItem = tempProducts.find( item => item.id === id );
+      let total = tempItem.price;
+      let cartItem = { ...tempItem, count: 1, total };
+      tempCart = [ ...tempCart, cartItem ];
+    } else {
+      tempItem.count++;
+      tempItem.total = tempItem.price * tempItem.count;
+      tempItem.total = parseFloat(tempItem.total.toFixed(2));
+    }
+    this.setState( () => {
+      return { cart: tempCart }
+    }, () => {
+      this.addTotals();
+      this.syncStorage();
+      this.openCart();
+    })
   }
 
   // set single product
