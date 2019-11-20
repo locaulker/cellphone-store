@@ -18,9 +18,10 @@ const TitleWrapper = styled.div`
   text-align: ${props => (props.center ? "center" : "left")};
 
   h2 {
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-top: 3rem;
   }
 

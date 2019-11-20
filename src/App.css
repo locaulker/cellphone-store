@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700&display=swap');
 
 :root {
   --primaryColor: #5fb7ea;
@@ -9,13 +10,17 @@
   --mainWhite: #fff;
   --mainBlack: #222;
   --mainTransition: all 0.3s ease-in-out;
-  --mainLetterSpacing: 0.3rem;
+  --mainLetterSpacing: 0.2rem;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   background: var(--mainGrey);
   color: var(--mainBlack);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Oswald', sans-serif;
 }
 
 .text-title {
@@ -41,7 +46,20 @@ body {
   border: none;
   transition: var(--mainTransition);
 }
-.main-link:hover {
+.medium-link {
+  padding: .4rem 1rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  display: inline-block;
+  text-transform: uppercase;
+  /* letter-spacing: var(--mainLetterSpacing); */
+  letter-spacing: 1px;
+  outline: 4px solid var(--primaryColor);
+  outline-offset: 4px;
+  border: none;
+  transition: var(--mainTransition);
+}
+.medium-link:hover {
   background: var(--mediumGrey);
   text-decoration: none;
   color: var(--mainWhite);
