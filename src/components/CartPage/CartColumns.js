@@ -6,11 +6,11 @@ export default function CartColumns() {
       <div className="row">
 
         <div className="col-lg-2">
-          <p className="text-uppercase">products</p>
+          <p className="text-uppercase">product</p>
         </div>
 
         <div className="col-lg-2">
-          <p className="text-uppercase">product name</p>
+          <p className="text-uppercase">name</p>
         </div>
 
         <div className="col-lg-2">
