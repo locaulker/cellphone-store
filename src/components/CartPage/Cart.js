@@ -7,10 +7,13 @@ import CartTotals from './CartTotals';
 
 export default function Cart() {
   return (
-    <div>
+    <section className="py-5">
+      <div className="container">
+        <Title title="main cart" center />
+      </div>
       <CartColumns />
       <CartList />
       <CartTotals />
-    </div>
+    </section>
   )
 }
