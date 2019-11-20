@@ -46,6 +46,13 @@ h1,h2,h3,h4,h5,h6 {
   border: none;
   transition: var(--mainTransition);
 }
+.main-link:hover {
+  background: var(--mediumGrey);
+  text-decoration: none;
+  color: var(--mainWhite);
+  outline: 4px solid var(--mediumGrey);
+}
+
 .medium-link {
   padding: .4rem 1rem;
   background: var(--primaryColor);
