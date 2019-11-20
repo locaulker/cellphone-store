@@ -10,7 +10,7 @@ export default function CartColumns() {
         </div>
 
         <div className="col-lg-2">
-          <p className="text-uppercase">name</p>
+          <p className="text-uppercase">product name</p>
         </div>
 
         <div className="col-lg-2">

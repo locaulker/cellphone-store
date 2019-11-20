@@ -1,8 +1,7 @@
 import React from 'react';
 import {ProductConsumer} from '../../context';
 import CartItem from './CartItem';
-import Title from '../Title';
-import { FaCentercode } from 'react-icons/fa';
+
 
 export default function CartList() {
   return (
@@ -34,9 +33,6 @@ export default function CartList() {
           </ProductConsumer>
         </div>
       </div>
-      {/* 
-      CartList
-      <CartItem /> */}
     </div>
   )
 }

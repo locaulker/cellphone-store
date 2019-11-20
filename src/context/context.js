@@ -106,7 +106,7 @@ class ProductProvider extends Component {
     const totals = this.getTotals();
     this.setState ({
       cartItems: totals.cartItems,
-      cartSubToTal: totals.subTotal,
+      cartSubTotal: totals.subTotal,
       cartTax: totals.tax,
       cartTotal: totals.total
     });
