@@ -33,15 +33,15 @@ export default function SingleProductPage() {
                     <p>{description}</p>
                     <button
                       type="button"
-                      className="medium-link"
+                      className="small-link"
                       style={{ margin: '0.75rem' }}
                       onClick={ () => addToCart(id) }
                     >add to cart</button>
                     <Link 
                       to='/products' 
-                      className="medium-link" 
+                      className="small-link" 
                       style={{ margin: '0.75rem' }}
-                    >all products</Link>
+                    >continue shopping</Link>
                   </div>
                 </div>
               </div>

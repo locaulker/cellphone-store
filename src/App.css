@@ -34,42 +34,39 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--primaryColor);
 }
 
-.main-link {
-  padding: .8rem 1.8rem;
+
+.main-link, .medium-link, .small-link {
   background: var(--primaryColor);
   color: var(--mainWhite);
   display: inline-block;
   text-transform: uppercase;
-  letter-spacing: var(--mainLetterSpacing);
-  outline: 4px solid var(--primaryColor);
-  outline-offset: 4px;
+  outline: 3px solid var(--primaryColor);
+  outline-offset: 3px;
   border: none;
   transition: var(--mainTransition);
-}
-.main-link:hover {
-  background: var(--mediumGrey);
-  text-decoration: none;
-  color: var(--mainWhite);
-  outline: 4px solid var(--mediumGrey);
 }
 
+.main-link {
+  padding: .8rem 1.8rem;
+  letter-spacing: var(--mainLetterSpacing);
+}
 .medium-link {
   padding: .4rem 1rem;
-  background: var(--primaryColor);
-  color: var(--mainWhite);
-  display: inline-block;
-  text-transform: uppercase;
-  /* letter-spacing: var(--mainLetterSpacing); */
   letter-spacing: 1px;
-  outline: 4px solid var(--primaryColor);
-  outline-offset: 4px;
-  border: none;
-  transition: var(--mainTransition);
 }
-.medium-link:hover {
+
+.small-link {
+  padding: .4rem .6rem;
+  letter-spacing: 1px;
+  font-size: .8rem;
+}
+
+.main-link:hover,
+.medium-link:hover,
+.small-link:hover {
   background: var(--mediumGrey);
   text-decoration: none;
   color: var(--mainWhite);
-  outline: 4px solid var(--mediumGrey);
+  outline: 3px solid var(--mediumGrey);
 }
 
