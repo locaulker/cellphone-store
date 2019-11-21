@@ -27,7 +27,7 @@ class ProductProvider extends Component {
 		min: 0,
 		max: 0,
 		company: "all",
-		shipping: false,
+		shipping: false
 	};
 
 	componentDidMount() {
@@ -264,11 +264,23 @@ class ProductProvider extends Component {
 	};
 
 	// functions to handle filtering
+	// handle change
 	handleChange = e => {
-		console.log(e);
+		const name = e.target.name;
+		const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+		
+		this.setState({
+			[name]:value
+		}, 
+			this.sortData
+		);
 	};
 
-	sortData = () => {};
+	// sort data
+	sortData = () => {
+		console.log('sorting data....');
+		
+	};
 
 	render() {
 		return (

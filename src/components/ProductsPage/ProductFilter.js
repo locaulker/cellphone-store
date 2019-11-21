@@ -8,14 +8,25 @@ export default function ProductFilter() {
 			{value => {
 				const { search, min, max, company, price, shipping, handleChange, storeProducts } = value;
 
+
+				let companies = new Set();
+				companies.add("all");
+				
+				for(let product in storeProducts) {
+					companies.add(storeProducts[product]["company"]);
+				}
+				companies = [...companies];
+				
+
 				return (
 					<div className="row my-5">
 						<div className="col-10 mx-auto">
 							<FilterWrapper>
 
+
 								{/* search */}
 								<div>
-									<label htmlFor="search prsearchoducts">search</label>
+									<label htmlFor="search">search</label>
 									<input 
 										type="text" 
 										name="search" 
@@ -25,6 +36,7 @@ export default function ProductFilter() {
 										className="filter-item"
 									/>
 								</div>
+
 
 								{/* category search */}
 								<div>
@@ -36,12 +48,16 @@ export default function ProductFilter() {
 										value={company} 
 										className="filter-item"
 									>
-										<option value="all">all</option>
-										<option value="fuji">fuji</option>
-										<option value="htc">htc</option>
-										<option value="google">google</option>
+										{
+											companies.map( (company, index) => {
+											return <option key={index} value={company}>
+													{company}
+												</option>
+											})
+										}
 									</select>
 								</div>
+
 
 								{/* price range */}
 								<div>
@@ -59,6 +75,7 @@ export default function ProductFilter() {
 									/>
 								</div>
 
+
 								{/* free shipping */}
 								<div>
 									<label htmlFor="shipping" className="mx-2">free shipping</label>
@@ -67,7 +84,7 @@ export default function ProductFilter() {
 										name="shipping" 
 										id="shipping"
 										onChange={handleChange}
-										value={shipping && true}
+										checked={shipping && true}
 									/>
 								</div>
 
