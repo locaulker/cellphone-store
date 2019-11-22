@@ -17,7 +17,7 @@ export default function SideCart() {
                 {cart.map(item => {
                   return (
                     <li className="cart-item mb-4" key={item.id}>
-                      <img src={`../${item.image}`} alt={item.title} width="35" />
+                      <img src={`${item.image}`} alt={item.title} width="35" />
                       <div className="mt-3">
                         <h6 className="text-capitalize text-muted">{item.title}</h6>
                         <h6 className="text-title">qty: {item.count}</h6>

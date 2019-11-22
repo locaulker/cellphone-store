@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .xd
+.env.development
 
 # testing
 /coverage
